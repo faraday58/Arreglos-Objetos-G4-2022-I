@@ -17,7 +17,7 @@ namespace Personas
             get => edad;
             set
             {
-                if(  edad < 12  || edad > 80     )
+                if(   12 < edad   || edad > 80     )
                 {
                     edad = 12;
                 }
@@ -36,6 +36,12 @@ namespace Personas
             Nombre = nombre;
             Telefono = telefono;
             Edad = edad;
+        }
+
+        public override string ToString()
+        {
+            string datos = String.Format("Nombre: {0} \n Teléfono: {1} \n Edad: {2}", Nombre,Telefono,Edad);
+            return datos;
         }
 
     }
